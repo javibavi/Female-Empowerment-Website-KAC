@@ -84,18 +84,25 @@ def login():
 def home():
    return render_template('index.html')
 
-# # If we want to see the events and presentations, we return here
-# @app.route("/eventsandpresentations")
-# def links():
-#    events = Event.query.all()  # Corrected
-#    presentations = Presentation.query.all()  # Corrected
-#    return render_template('eventsandpresentations.html', events=events,
-#                           presentations=presentations)
+# If we want to see the events and presentations, we return here
+@app.route("/resources")
+def links():
+   # Get the current date
+   current_date = datetime.now().date()
 
-# If we want to see the about page, we return here
-# @app.route("/about")
-# def about():
-#    return render_template('about.html')
+   # Query events happening on the current day or in the future
+   future_events = Event.query.filter(Event.date >= current_date).all()
+
+   # Sort events by date in ascending order
+   future_events_sorted = sorted(future_events, key=lambda event: event.date)
+
+   
+   # Query the latest presentations, ordered by date_added in descending order
+   latest_presentations = Presentation.query.order_by(desc(Presentation.date_added)).all()
+   
+   return render_template('resources.html', events=future_events_sorted,
+                          presentations=latest_presentations)
+
 
 # Function to display the events and presentations
 @app.route('/dashboard')
@@ -193,6 +200,13 @@ def delete_presentation(presentation_id):
    return redirect('/dashboard')
    
    
+# Logout route
+@app.route('/logout')
+def logout():
+   # Remove the 'logged_in' session variable to log the user out
+   session.pop('logged_in', None)
+   flash('Logged out successfully!')
+   return redirect(url_for('login'))  # Redirect the user to the login page
 
 if __name__ == '__main__':
    app.run()

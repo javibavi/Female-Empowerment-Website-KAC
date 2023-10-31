@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Female Empowerment Club</title>
+    <!-- Include the Pacifico font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+
+    <style>
+        body {
+            background-color: #f19aa7;
+            margin: 0;
+            padding: 0;
+            font-family: 'Oswald';
+            font-size: 18px; /* Adjust the font size as needed */
+            color: white; /* Match the color with the headers */
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 40px;
+            color: white;
+        }
+
+        .section-header {
+            font-size: 40px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .event-item, .resource-item { /* Apply the font size to items in the for loops */
+            font-size: 40px;
+            color: white; /* You can also set the color here */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/">
+            <h1 class="title">Female Empowerment Club</h1>
+        </a>
+
+        <div class="section-header events">Events</div>
+        <ul>
+            {% for event in events %}
+                <li class="event-item">
+                    {{ event.name }} - {{ event.date }}
+                </li>
+            {% endfor %}
+        </ul>
+
+        <div class="section-header resources">Resources</div>
+        <ul>
+            {% for presentation in presentations %}
+                <li class="resource-item">
+                    <a href="{{ presentation.url }}" target="_blank">{{ presentation.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
