@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Dashboard</title>
+</head>
+<body>
+   <h1>Event Dashboard</h1>
+
+   <a href="/create_event">
+       <button>Create Event</button>
+   </a>
+
+   <a href="/create_presentation">
+       <button>Create Presentation</button>
+   </a>
+
+   <h2>Events:</h2>
+   <ul>
+       {% for event in events %}
+           <li>
+               {{ event.name }} - {{ event.date }}
+               <form method="POST" action="/delete_event/{{ event.id }}">
+                   <button type="submit">Delete</button>
+               </form>
+           </li>
+       {% endfor %}
+   </ul>
+
+   <h2>Presentations:</h2>
+   <ul>
+       {% for presentation in presentations %}
+           <li>
+                <a href="{{ presentation.url }}" target="_blank">{{ presentation.name }}</a>
+               <form method="POST" action="/delete_presentation/{{ presentation.id }}">
+                   <button type="submit">Delete</button>
+               </form>
+           </li>
+       {% endfor %}
+   </ul>
+   <!-- Logout Button -->
+   <form method="GET" action="/logout">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>
+
