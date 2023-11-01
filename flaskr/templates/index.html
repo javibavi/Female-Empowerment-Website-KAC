@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Female Empowerment Club</title>
-    <!-- Include the Pacifico font from Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
     <style>
         body {
-            background-color: #f19aa7; /* Updated background color */
+            background-color: #d69ba2;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -19,7 +20,7 @@
             position: relative;
             min-height: 160vh;
             overflow-y: auto;
-            padding-bottom: 100px; /* Adjust as needed */
+            padding-bottom: 100px;
         }
 
 
@@ -111,69 +112,113 @@
         }
 
 
-        /* Hover effect for the buttons */
-        .custom-button:hover {
-            background-color: #ff6b81;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-
-        .custom-image {
-           
-            width: 400px; /* Adjust the width as needed */
-            height: 300px; /* Adjust the height as needed */
-            border: none;
-            padding: 9px 16px;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: box-shadow 0.15s;
-            vertical-align: bottom;
-        }
-       
-
-
-        .custom-image2 {
-            width: 400px; /* Adjust the width as needed */
-            height: 300px; /* Adjust the height as needed */
-            border: none;
-            padding: 9px 16px;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: box-shadow 0.15s;
-           
-            margin-left: 250px;
-        }
-
-
-        .custom-image3 {
-            width: 400px; /* Adjust the width as needed */
-            height: 300px; /* Adjust the height as needed */
-            border: none;
-            padding: 9px 16px;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: box-shadow 0.15s;
-            margin-left: 250px;
+        /* CSS for the parent container and the image-container */
+        .image-parent-container {
+            display: flex;
+            justify-content: space-between;
         }
 
 
        
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+
+        .image {
+            margin-top: 100px;
+            width: 40%;
+            height: 80%;
+            opacity: 0;
+            animation: fadeInImage 1s ease-in-out forwards;
+            border-radius: 100px;
+        }
+
+
+        .image1 {
+            margin-top: 100px;
+            width: 40%;
+            height: 80%;
+            opacity: 0;
+            animation: fadeInImage 2s ease-in-out forwards;
+            border-radius: 100px;
+        }
+
+
+        .text {
+            margin-top: 40px;
+            background-color: #d69ba2;
+            color: #fff;
+            width: 40%;
+            padding: 10px;
+            opacity: 0;
+            animation: slideInText 1s ease-in-out forwards;
+            border: none;
+            padding: 9px 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: box-shadow 0.15s;
+            line-height: 1.45;
+        }
+
+
+        .text1 {
+            margin-top: 40px;
+            background-color: #d69ba2;
+            color: #fff;
+            width: 40%;
+            padding: 10px;
+            opacity: 0;
+            animation: slideInText 2s ease-in-out forwards;
+            border: none;
+            padding: 9px 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: box-shadow 0.15s;
+            line-height: 1.45;
+        }
+
+
+        /* Keyframes */
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        @keyframes slideInText {
+            from {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
-
-
-   
     <div class="container">
         <!-- Your title -->
         <h1 class="title">Female Empowerment Club</h1>
        
-        <!-- Create a list of buttons -->
+       
         <ul class="button-list">
             <li>
-                <a href="resources" class="custom-button">Resources</a>
+                <a href="/resources" class="custom-button">Resources</a>
             </li>
         </ul>
+
+
+       
        
         <!-- Information section -->
         <div class="info-section">
@@ -188,38 +233,36 @@
             </div>
 
 
-
-
             <!-- Social Media Links -->
             <div class="social-media">
                 <a href="https://www.instagram.com/kac_girl.empowerment/" class="custom-button">Instagram</a>
-                <!-- Add more social media links as needed -->
+               
             </div>
         </div>
-
-
-        <!-- Image in the top-left corner -->
-        <img src="https://kipptexas.org/wp-content/uploads/2019/09/KIPP-Austin-Collegiate.png" alt="Logo" class="corner-image">
        
+        <!-- Parent Container for Image and Text Pairs -->
+        <div class="image-parent-container">
+            <div class="image-container">
+                <img src="https://images.squarespace-cdn.com/content/v1/606bc9d758ec05211bf4d60b/1638377795210-UULUM7WO7I5NXINU7VIO/STG+KIPP+LG-.jpg" alt="Image Description" class="image">
+                <div class="text">
+                    KIPP's commitment to female empowerment plays a pivotal role in fostering inclusiveness within various academic fields. By providing a supportive and empowering environment for young women, KIPP encourages them to pursue their passions and break barriers in traditionally male-dominated disciplines. Through mentorship, educational opportunities, and a strong focus on gender equality, KIPP empowers young women to pursue diverse academic pathways, ensuring that the voices and perspectives of women are heard and valued in every field of study. This dedication to female empowerment not only benefits individual students but also contributes to a more inclusive and equitable academic landscape for all.
+                    <br><br>
+                    <a href="https://kipptexas.org/">Learn More</a>
+                </div>
 
 
-        <img src="https://images.squarespace-cdn.com/content/v1/606bc9d758ec05211bf4d60b/1638377795210-UULUM7WO7I5NXINU7VIO/STG+KIPP+LG-.jpg" alt="Logo" class="custom-image">
+            </div>
 
 
-        <img src="https://back.3blmedia.com/sites/default/files/inline-images/AMD_KIPP_Lab_DSC6503.jpg" alt="Logo" class="custom-image2">
-
-
-        <img src="https://kipptexas.org/wp-content/uploads/2022/05/Steminists.jpg" alt="Logo" class="custom-image3">
-        <div class="custom-image">
-        
-<p style="font-family: 'Playfair Display', serif;">
-    KIPP's commitment to female empowerment plays a pivotal role in fostering inclusiveness within various academic fields. By providing a supportive and empowering environment for young women,
-            KIPP encourages them to pursue their passions and break barriers in traditionally male-dominated disciplines. Through mentorship, educational opportunities, and a strong focus on gender equality,
-             KIPP empowers young women to pursue diverse academic pathways, ensuring that the voices and perspectives of women are heard and valued in every field of study.
-             This dedication to female empowerment not only benefits individual students but also contributes to a more inclusive and equitable academic landscape for all.</p>
-       
-
-
+            <div class="image-container">
+                <img src="https://images.squarespace-cdn.com/content/v1/606bc9d758ec05211bf4d60b/1638377795210-UULUM7WO7I5NXINU7VIO/STG+KIPP+LG-.jpg" alt="Image Description" class="image1">
+                <div class="text1">
+                    KIPP's commitment to female empowerment plays a pivotal role in fostering inclusiveness within various academic fields. By providing a supportive and empowering environment for young women, KIPP encourages them to pursue their passions and break barriers in traditionally male-dominated disciplines. Through mentorship, educational opportunities, and a strong focus on gender equality, KIPP empowers young women to pursue diverse academic pathways, ensuring that the voices and perspectives of women are heard and valued in every field of study. This dedication to female empowerment not only benefits individual students but also contributes to a more inclusive and equitable academic landscape for all.
+                    <br><br>
+                    <a href="https://kipptexas.org/">Learn More</a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
