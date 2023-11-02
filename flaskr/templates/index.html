@@ -26,7 +26,7 @@
         .title {
             font-size: 40px;
             font-family: 'Oswald';
-            position: absolute;
+            position: relative;
             top: 1px;
             left: 50%;
             transform: translateX(-50%);
@@ -119,9 +119,23 @@
             width: 45%;
             padding: 10px;
         }
-
-
         .image {
+    width: 100%;
+    border-radius: 20%;
+    animation: fadeInImage 2.5s ease both, slideInText 1s ease both;
+}
+.text {
+    background-color: #d69ba2;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    line-height: 1.45;
+    animation: slideInText 4s ease both;
+}
+
+
+       /*  .image {
             width: 100%;
             border-radius: 20%;
         }
@@ -136,10 +150,9 @@
             transition: background-color 0.15s, box-shadow 0.15s;
             line-height: 1.45;
         }
-
-
+           
         /* Keyframes */
-        @keyframes fadeInImage {
+        @keyframes slideInImage {
             from {
                 opacity: 0;
             }
