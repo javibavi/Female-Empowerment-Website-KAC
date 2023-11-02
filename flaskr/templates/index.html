@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Female Empowerment Club</title>
@@ -35,17 +34,15 @@
         }
 
 
-        /* Style for the button list */
         .button-list {
             list-style-type: none;
-            padding: 25px;
+            padding: 80px;
             display: flex;
             justify-content: center;
             margin-top: 100px;
         }
 
 
-        /* Style for each button */
         .custom-button {
             background-color: #f4556c;
             color: white;
@@ -55,19 +52,17 @@
             font-weight: bold;
             font-size: 15px;
             cursor: pointer;
-            transition: box-shadow 0.15s;
+            transition: background-color 0.15s, box-shadow 0.15s;
             margin: 20px;
         }
 
 
-        /* Hover effect for the buttons */
         .custom-button:hover {
             background-color: #ff6b81;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
 
-        /* Style for the image in the top-left corner */
         .corner-image {
             position: absolute;
             top: 10px;
@@ -76,7 +71,6 @@
         }
 
 
-        /* Style for the information section */
         .info-section {
             background-color: #fff;
             padding: 20px;
@@ -88,13 +82,11 @@
         }
 
 
-        /* Style for contact info */
         .contact-info {
             font-size: 18px;
         }
 
 
-        /* Style for social media links */
         .social-media {
             margin-top: 20px;
         }
@@ -112,72 +104,36 @@
         }
 
 
-        /* CSS for the parent container and the image-container */
         .image-parent-container {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
 
 
-       
         .image-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 20px;
+            width: 45%;
+            padding: 10px;
         }
 
 
         .image {
-            margin-top: 100px;
-            width: 40%;
-            height: 80%;
-            opacity: 0;
-            animation: fadeInImage 1s ease-in-out forwards;
-            border-radius: 100px;
-        }
-
-
-        .image1 {
-            margin-top: 100px;
-            width: 40%;
-            height: 80%;
-            opacity: 0;
-            animation: fadeInImage 2s ease-in-out forwards;
-            border-radius: 100px;
+            width: 100%;
+            border-radius: 20%;
         }
 
 
         .text {
-            margin-top: 40px;
             background-color: #d69ba2;
             color: #fff;
-            width: 40%;
             padding: 10px;
-            opacity: 0;
-            animation: slideInText 1s ease-in-out forwards;
-            border: none;
-            padding: 9px 16px;
             border-radius: 50px;
             cursor: pointer;
-            transition: box-shadow 0.15s;
-            line-height: 1.45;
-        }
-
-
-        .text1 {
-            margin-top: 40px;
-            background-color: #d69ba2;
-            color: #fff;
-            width: 40%;
-            padding: 10px;
-            opacity: 0;
-            animation: slideInText 2s ease-in-out forwards;
-            border: none;
-            padding: 9px 16px;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: box-shadow 0.15s;
+            transition: background-color 0.15s, box-shadow 0.15s;
             line-height: 1.45;
         }
 
@@ -207,58 +163,42 @@
 </head>
 <body>
     <div class="container">
-        <!-- Your title -->
         <h1 class="title">Female Empowerment Club</h1>
-       
        
         <ul class="button-list">
             <li>
                 <a href="/resources" class="custom-button">Resources</a>
             </li>
         </ul>
-
-
        
-       
-        <!-- Information section -->
         <div class="info-section">
             <h2>About Us</h2>
             <p>Welcome to the Female Empowerment Club! We are dedicated to empowering women and promoting gender equality.</p>
-
-
-            <!-- Contact Information -->
+           
             <div class="contact-info">
                 <p>Email: info@femaleempowermentclub.com</p>
                 <p>Phone: (123) 456-7890</p>
             </div>
-
-
-            <!-- Social Media Links -->
+           
             <div class="social-media">
                 <a href="https://www.instagram.com/kac_girl.empowerment/" class="custom-button">Instagram</a>
-               
             </div>
         </div>
        
-        <!-- Parent Container for Image and Text Pairs -->
         <div class="image-parent-container">
             <div class="image-container">
                 <img src="https://images.squarespace-cdn.com/content/v1/606bc9d758ec05211bf4d60b/1638377795210-UULUM7WO7I5NXINU7VIO/STG+KIPP+LG-.jpg" alt="Image Description" class="image">
                 <div class="text">
-                    KIPP's commitment to female empowerment plays a pivotal role in fostering inclusiveness within various academic fields. By providing a supportive and empowering environment for young women, KIPP encourages them to pursue their passions and break barriers in traditionally male-dominated disciplines. Through mentorship, educational opportunities, and a strong focus on gender equality, KIPP empowers young women to pursue diverse academic pathways, ensuring that the voices and perspectives of women are heard and valued in every field of study. This dedication to female empowerment not only benefits individual students but also contributes to a more inclusive and equitable academic landscape for all.
+                    some text would go here adressing certain images. For example in this image there could be a small text talking about kipps contributions to promote euquality.
                     <br><br>
                     <a href="https://kipptexas.org/">Learn More</a>
                 </div>
-
-
             </div>
-
-
+           
             <div class="image-container">
-                <img src="https://images.squarespace-cdn.com/content/v1/606bc9d758ec05211bf4d60b/1638377795210-UULUM7WO7I5NXINU7VIO/STG+KIPP+LG-.jpg" alt="Image Description" class="image1">
-                <div class="text1">
-                    KIPP's commitment to female empowerment plays a pivotal role in fostering inclusiveness within various academic fields. By providing a supportive and empowering environment for young women, KIPP encourages them to pursue their passions and break barriers in traditionally male-dominated disciplines. Through mentorship, educational opportunities, and a strong focus on gender equality, KIPP empowers young women to pursue diverse academic pathways, ensuring that the voices and perspectives of women are heard and valued in every field of study. This dedication to female empowerment not only benefits individual students but also contributes to a more inclusive and equitable academic landscape for all.
-                    <br><br>
+                <img src="https://images.squarespace-cdn.com/content/v1/606bc9d758ec05211bf4d60b/1638377795210-UULUM7WO7I5NXINU7VIO/STG+KIPP+LG-.jpg" alt="Image Description" class="image">
+                <div class="text">
+                  some text would go here adressing certain images. For example in this image there could be a small text talking about kipps contributions to promote euquality.
                     <a href="https://kipptexas.org/">Learn More</a>
                 </div>
             </div>

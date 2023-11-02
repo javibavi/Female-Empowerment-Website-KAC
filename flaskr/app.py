@@ -82,7 +82,7 @@ def login():
 # If we are home return the render template for the home page
 @app.route("/")
 def home():
-   return render_template('testindex.html')
+   return render_template('index.html')
 
 # If we want to see the events and presentations, we return here
 @app.route("/resources")
